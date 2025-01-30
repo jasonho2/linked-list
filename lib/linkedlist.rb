@@ -43,11 +43,9 @@ class LinkedList
 
     if @head.nil?
       @head = new_node
-    elsif @head == @tail
-      @tail = new_node
-      @head.next_node = @tail
     else
-      @tail = new_node
+      new_node.next_node = @head
+      @head = new_node
     end
 
   end
