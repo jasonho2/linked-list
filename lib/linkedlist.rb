@@ -2,9 +2,9 @@ class Node
 
   attr_accessor :node, :next_node
 
-  def initialize(value)
+  def initialize(value = nil, next_node = nil)
     @node = value
-    @next_node = nil
+    @next_node = next_node
   end
 
 end
@@ -39,9 +39,11 @@ class LinkedList
 
     if @head.nil?
       @head = new_node
+    elsif @head == @tail
+      @tail = new_node
+      @head.next_node = @tail
     else
-      new_node.next_node = @head
-      @head = new_node
+      @tail = new_node
     end
 
   end
