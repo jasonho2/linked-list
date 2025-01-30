@@ -70,4 +70,13 @@ class LinkedList
     current
   end
 
+  def to_s
+    current = @head
+    while current
+      print "( #{current.node} ) -> "
+      current = current.next_node
+    end
+    puts "nil"
+  end
+
 end

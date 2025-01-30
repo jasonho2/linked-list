@@ -9,7 +9,7 @@ list.append('cat')
 #list.append('snake')
 #list.append('turtle')
 
-puts list.inspect
+puts list.to_s
 puts list.size
 puts list.head.inspect
 puts list.tail.inspect
