@@ -7,6 +7,10 @@ class Node
     @next_node = next_node
   end
 
+  def inspect
+    "<Node: #{object_id} @node=#{@node}, @next_node=#{@next_node ? @next_node.node : 'nil'}>"
+  end
+
 end
 
 class LinkedList
