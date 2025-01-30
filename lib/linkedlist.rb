@@ -46,6 +46,14 @@ class LinkedList
 
   end
 
-  
+  def size
+    count = 0
+    current = @head
+    while current
+      count += 1
+      current = current.next_node
+    end
+    count
+  end
 
 end
