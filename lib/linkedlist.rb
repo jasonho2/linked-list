@@ -63,11 +63,13 @@ class LinkedList
 
   # head method
   def head
+    return if @head.nil?
     @head
   end
 
   # tail method
   def tail
+    return if @head.nil?
     current = @head
     while current.next_node != nil
       current = current.next_node
@@ -77,6 +79,7 @@ class LinkedList
 
   # at method
   def at(index, current = @head)
+    return if @head.nil?
     count = 0
     current = @head
     while count < index
