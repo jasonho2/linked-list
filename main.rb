@@ -18,3 +18,6 @@ puts list.at(4)
 
 puts list.pop
 puts list.to_s
+
+puts list.contains?("parrot")
+puts list.contains?("zebra")

@@ -107,9 +107,15 @@ class LinkedList
   # contains? method
   def contains?(value)
     return if @head.nil?
-
+    current = @head
+    while current
+      return true if current.node == value
+      current = current.next_node
+    end
+    return false
   end
 
+  # to_s method to print linked list contents cleanly
   def to_s
     current = @head
     while current
