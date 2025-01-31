@@ -72,6 +72,16 @@ class LinkedList
     current
   end
 
+  def at(index, current = @head)
+    count = 0
+    current = @head
+    while count < index
+      current = current.next_node
+      count += 1
+    end
+    "<Node: #{object_id} @node=#{current.node}, @next_node=#{current.next_node.node}>"
+  end
+
   def to_s
     current = @head
     while current
