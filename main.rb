@@ -15,3 +15,6 @@ puts list.head.inspect
 puts list.tail.inspect
 
 puts list.at(4)
+
+puts list.pop
+puts list.to_s

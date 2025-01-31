@@ -82,6 +82,20 @@ class LinkedList
     "<Node: #{object_id} @node=#{current.node}, @next_node=#{current.next_node.node}>"
   end
 
+  def pop
+    return if @head.nil?
+    if @head.next_node.nil?
+      @head = nil
+      return
+    end
+    current = @head
+    while current.next_node.next_node
+      current = current.next_node
+    end
+
+    current.next_node = nil
+  end
+
   def to_s
     current = @head
     while current
