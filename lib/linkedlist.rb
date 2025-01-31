@@ -50,6 +50,7 @@ class LinkedList
 
   end
 
+  #size method
   def size
     count = 0
     current = @head
@@ -60,10 +61,12 @@ class LinkedList
     count
   end
 
+  # head method
   def head
     @head
   end
 
+  # tail method
   def tail
     current = @head
     while current.next_node != nil
@@ -72,6 +75,7 @@ class LinkedList
     current
   end
 
+  # at method
   def at(index, current = @head)
     count = 0
     current = @head
@@ -82,6 +86,7 @@ class LinkedList
     "<Node: #{object_id} @node=#{current.node}, @next_node=#{current.next_node.node}>"
   end
 
+  # pop method
   def pop
     return if @head.nil?
     if @head.next_node.nil?
@@ -94,6 +99,12 @@ class LinkedList
     end
 
     current.next_node = nil
+  end
+
+  # contains? method
+  def contains?(value)
+    return if @head.nil?
+
   end
 
   def to_s
