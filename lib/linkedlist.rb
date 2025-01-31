@@ -138,4 +138,25 @@ class LinkedList
     puts "nil"
   end
 
+  # insert_at method
+  def insert_at(value, index)
+    new_node = Node.new(value)
+    if index == 0
+      new_node.next_node = @head
+      @head = new_node
+    end
+
+    return "empty list" if @head.nil?
+    
+    i = 0
+    current = @head
+    while i < index - 1
+      i += 1
+      current = current.next_node
+    end
+    next_node = current.next_node
+    current.next_node = new_node
+    new_node.next_node = next_node
+  end
+
 end
