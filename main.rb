@@ -21,3 +21,6 @@ puts list.to_s
 
 puts list.contains?("parrot")
 puts list.contains?("zebra")
+
+puts list.find("cat")
+puts list.find("zebra")

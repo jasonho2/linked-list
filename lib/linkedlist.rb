@@ -115,6 +115,19 @@ class LinkedList
     return false
   end
 
+  # find method
+  def find(value)
+    return "empty list" if @head.nil?
+    index = 0
+    current = @head
+    while current
+      return index if current.node == value
+      index += 1
+      current = current.next_node
+    end
+    return "not found in linked list"
+  end
+
   # to_s method to print linked list contents cleanly
   def to_s
     current = @head
