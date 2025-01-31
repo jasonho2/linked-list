@@ -63,13 +63,13 @@ class LinkedList
 
   # head method
   def head
-    return if @head.nil?
+    return "empty list" if @head.nil?
     @head
   end
 
   # tail method
   def tail
-    return if @head.nil?
+    return "empty list" if @head.nil?
     current = @head
     while current.next_node != nil
       current = current.next_node
@@ -79,7 +79,7 @@ class LinkedList
 
   # at method
   def at(index, current = @head)
-    return if @head.nil?
+    return "empty list" if @head.nil?
     count = 0
     current = @head
     while count < index
@@ -91,7 +91,7 @@ class LinkedList
 
   # pop method
   def pop
-    return if @head.nil?
+    return "empty list" if @head.nil?
     if @head.next_node.nil?
       @head = nil
       return
@@ -106,7 +106,7 @@ class LinkedList
 
   # contains? method
   def contains?(value)
-    return if @head.nil?
+    return "empty list" if @head.nil?
     current = @head
     while current
       return true if current.node == value
